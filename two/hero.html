@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>英雄总览</title>
+	<link rel="stylesheet" href="css/hero.css" type="text/css">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<script type="text/javascript">
+
+		window.onload = function (){
+
+			var oDiv = document.getElementById("container");
+			var oOption = oDiv.getElementsByClassName("eachoption");
+			var aBtn = document.getElementsByTagName("input");
+			var oDivall = document.getElementById("containerall");
+			var aDiv = oDivall.getElementsByClassName("heropic");
+			for(var i=0; i<aBtn.length; i++){
+            //给当前事件一个自定义的属性，用来储存下标
+            	aBtn[i].index = i;
+            	aBtn[i].onmousedown = function (){            	
+            		for(var j=0; j<aDiv.length; j++){                    
+            			aDiv[j].style.display="none";
+            		}
+            		aDiv[this.index].style.display="block";
+            		if(this.index>=3){
+            			aDiv[this.index].style.overflow="hidden";
+            		}
+            	};
+        	}
+    	};
+	</script>
+</head>
+<body>
+	<div class="main">
+		<!-- 顶部图片开始 -->
+		<img src="images/top.jpg" class="topimg">
+		<!-- 顶部图片结束 -->
+		<!-- 中间英雄介绍开始 -->
+		<!-- 英雄资料开始 -->
+		<div class="hero" id="containerall">
+			<div class="herooption" id="container">
+				<div class="rectangle"></div>
+				<div class="herooptiontitle">英雄资料</div>
+				<div class="eachoption">
+					<input type="radio" name="sdd" checked>
+					<span>所有英雄</span>
+				</div>
+				<div class="eachoption">
+					<input type="radio" name="sdd">
+					<span>战士</span>
+				</div>
+				<div class="eachoption">
+					<input type="radio" name="sdd">
+					<span>法师</span>
+				</div>
+				<div class="eachoption">
+					<input type="radio" name="sdd">
+					<span>刺客</span>
+				</div>
+				<div class="eachoption">
+					<input type="radio" name="sdd">
+					<span>坦克</span>
+				</div>
+				<div class="eachoption">
+					<input type="radio" name="sdd">
+					<span>射手</span>
+				</div>
+				<div class="eachoption">
+					<input type="radio" name="sdd">
+					<span>辅助</span>
+				</div>
+				<div class="heromore"></div>
+			</div>
+			<div class="heropic" style="display: block;">
+				<script type="text/javascript">
+					var nameBegin = "eachhero";
+					var total = 127;
+					for(var i=1;i<=total;i++){
+						var name = nameBegin;
+						var imgname = "images/lolpic/"
+						if((total%13==0 && i>=total-12) ||
+							(total%13!=0 && i+(total%13)>total)){
+							name+="down";
+						}
+						if (i%13==1) {
+							name+="left";
+						}
+						imgname = imgname+i+".png";
+						document.write("<div class='"+name+"'>"+"<img src='"+imgname+"' class='heroeachimg'>"+"</div>");
+					}
+
+				</script>
+				<img src="" alt="">
+			</div>
+			<div class="heropic">
+				<script type="text/javascript">
+					var nameBegin = "eachhero";
+					var total = 62;
+					var j=22;
+					for(var i=1;i<=total;i++){
+						var name = nameBegin;
+						var imgname = "images/lolpic/"
+						if((total%13==0 && i>=total-12) ||
+							(total%13!=0 && i+(total%13)>total)){
+							name+="down";
+						}
+						if (i%13==1) {
+							name+="left";
+						}
+						imgname = imgname+(j++)+".png";
+						document.write("<div class='"+name+"'>"+"<img src='"+imgname+"' class='heroeachimg'>"+"</div>");
+					}
+				</script>
+			</div>
+			<div class="heropic">
+				<script type="text/javascript">
+					var nameBegin = "eachhero";
+					var total = 58;
+					var j=43;
+					for(var i=1;i<=total;i++){
+						var name = nameBegin;
+						if((total%13==0 && i>=total-12) ||
+							(total%13!=0 && i+(total%13)>total)){
+							name+="down";
+						}
+						if (i%13==1) {
+							name+="left";
+						}
+						imgname = "images/lolpic/"+(j++)+".png";
+						document.write("<div class='"+name+"'>"+"<img src='"+imgname+"' class='heroeachimg'>"+"</div>");
+					}
+				</script>
+			</div>
+			<div class="heropic">
+				<script type="text/javascript">
+					var nameBegin = "eachhero";
+					var total = 35;
+					var j=64;
+					for(var i=1;i<=total;i++){
+						var name = nameBegin;
+						if((total%13==0 && i>=total-12) ||
+							(total%13!=0 && i+(total%13)>total)){
+							name+="down";
+						}
+						if (i%13==1) {
+							name+="left";
+						}
+						imgname = "images/lolpic/"+(j++)+".png";
+						document.write("<div class='"+name+"'>"+"<img src='"+imgname+"' class='heroeachimg'>"+"</div>");
+					}
+				</script>
+			</div>
+			<div class="heropic">
+				<script type="text/javascript">
+					var nameBegin = "eachhero";
+					var total = 42;
+					var j=43;
+					for(var i=1;i<=total;i++){
+						var name = nameBegin;
+						if((total%13==0 && i>=total-12) ||
+							(total%13!=0 && i+(total%13)>total)){
+							name+="down";
+						}
+						if (i%13==1) {
+							name+="left";
+						}
+						imgname = "images/lolpic/"+(j++)+".png";
+						document.write("<div class='"+name+"'>"+"<img src='"+imgname+"' class='heroeachimg'>"+"</div>");
+					}
+				</script>
+			</div>
+			<div class="heropic">
+				<script type="text/javascript">
+					var nameBegin = "eachhero";
+					var total = 25;
+					var j=78;
+					for(var i=1;i<=total;i++){
+						var name = nameBegin;
+						if((total%13==0 && i>=total-12) ||
+							(total%13!=0 && i+(total%13)>total)){
+							name+="down";
+						}
+						if (i%13==1) {
+							name+="left";
+						}
+						imgname = "images/lolpic/"+(j++)+".png";
+						document.write("<div class='"+name+"'>"+"<img src='"+imgname+"' class='heroeachimg'>"+"</div>");
+					}
+				</script>
+			</div>
+			<div class="heropic">
+				<script type="text/javascript">
+					var nameBegin = "eachhero";
+					var total = 31;
+					var j=35;
+					for(var i=1;i<=total;i++){
+						var name = nameBegin;
+						if((total%13==0 && i>=total-12) ||
+							(total%13!=0 && i+(total%13)>total)){
+							name+="down";
+						}
+						if (i%13==1) {
+							name+="left";
+						}
+						imgname = "images/lolpic/"+(j++)+".png";
+						document.write("<div class='"+name+"'>"+"<img src='"+imgname+"' class='heroeachimg'>"+"</div>");
+					}
+				</script>
+			</div>
+		</div>
+		<!-- 英雄资料结束 -->
+		<!-- 中间英雄介绍结束 -->
+		<!-- 页尾开始 -->
+		<div class="foot">
+			<a href="#" title="腾讯互动娱乐">
+				<div class="footpicone"></div>
+			</a>
+			<a href="#" title="RIOT">
+				<div class="footpictwo"></div>
+			</a>
+
+			<div class="footword">
+				<p>腾讯互动娱乐|服务条款|腾讯游戏隐私保护指引|腾讯游戏招聘|腾讯游戏客服|游戏地图|商务合作|腾讯网|网站导航</p>
+				<p>腾讯公司版权所有</p>
+				<p>COPYRIGHT © 1998 - 2019 TENCENT. ALL RIGHTS RESERVED.</p>
+				<p>COPYRIGHT © 2012 Riot Games,Inc. ALL RIGHTS RESERVED.</p>
+				<p>本网络游戏适合18+岁的用户使用；为了您的健康，请合理控制游戏时间。</p>
+				<p>粤网文[2017]6138-1456号|（总）网出证（粤）字第057号</p>
+				<p>批准文号：新出审字[2011]310号 |文网进字[2011] 004号 | 出版物号：ISBN 978-7-89989-145-2|全国文化市场统一举报电话：12318</p>
+			</div>
+		</div>
+		<!-- 页尾结束 -->
+	</div>
+</body>
+</html>

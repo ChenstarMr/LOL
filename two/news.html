@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>新闻列表</title>
+	<link rel="stylesheet" href="css/news.css" type="text/css">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	
+	<script type="text/javascript">
+		window.onload = function (){
+			var listtitleword=[["新闻","赛事","赛事","视频","视频","赛事","新闻","视频","新闻","新闻","赛事","赛事","公告","公告","新闻","新闻"],["公告","公告","公告","新闻","公告","公告","公告","公告","公告","公告","公告","公告","公告","公告","公告","公告"],["视频","赛事","赛事","赛事","赛事","视频","赛事","赛事","赛事","赛事","赛事","视频","视频","娱乐","视频","赛事"],["教学","教学","教学","教学","教学","教学","教学","教学","教学","教学","教学","教学","教学","教学","教学","教学"],["论坛","其他","娱乐","娱乐","娱乐","新闻","新闻","论坛","论坛","论坛","论坛","论坛","论坛","论坛","论坛","论坛"]];
+			var color={"新闻":"#bb9a6c","赛事":"#6388c5","视频":"#e9852d","公告":"#bb9a6c","娱乐":"#1da6ba","教学":"#4ba36a","其他":"#1da6ba","论坛":"#bb9a6c"};
+			var listtitle = document.getElementsByClassName("listtitle");
+			var listwords = document.getElementsByClassName("listwords");
+			var listli = document.getElementsByClassName("listli");
+			for(var i=0;i<listtitle.length;i++){
+				var m = Math.floor(i/16);
+				var n = i%16;
+				listwords[i].index = i;
+				listtitle[i].style.color=color[listtitleword[m][n]];
+				listtitle[i].style.borderColor=color[listtitleword[m][n]];
+				listwords[i].onmouseover=function(){
+					var m = Math.floor(this.index/16);
+					var n = this.index%16;
+					listwords[this.index].style.color=color[listtitleword[m][n]];
+				};
+				listwords[i].onmouseout = function(){
+					listwords[this.index].style.color= "#424242";
+				};
+			}
+			listli[0].style.color = "#0da0b4";
+			listli[0].style.fontWeight = "bold";
+			listli[0].style.borderBottomWidth = "2px";
+			listli[0].style.borderBottomColor = "#0da0b4";
+			listli[0].style.borderBottomStyle = "solid";
+			for(var i=0;i<listli.length;i++){
+				listli[i].index = i;
+				listli[i].onmouseover = function(){
+					for(var j=0;j<listli.length;j++){
+						listli[j].style.color = "#676767";
+						listli[j].style.fontWeight = "normal";
+						listli[j].style.borderBottomWidth = "0px";
+						this.style.color = "#0da0b4";
+						this.style.fontWeight = "bold";
+						this.style.borderBottomWidth = "2px";
+						this.style.borderBottomColor = "#0da0b4";
+						this.style.borderBottomStyle = "solid";
+					}
+				};
+				// listli[i].onmouseout = function(){
+					
+				// 	listli[this.index].style.color = "#0da0b4";
+				// };
+			}
+		};
+	</script>
+<script src="dist/js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+       $('.listli').mouseover(function(){
+          $('.newsdiv').hide();
+
+          var i = $(this).index();
+          /*alert(i);//弹出当前按钮的索引号*/
+          /*$('#container').find('div').eq(i).css('display','block');*/
+          $('.newsdiv').eq(i).show();		
+      })
+   })
+</script>
+</head>
+<body>
+	<div class="main">
+		<!-- 顶部图片开始 -->
+		<img src="images/top.jpg" class="topimg">
+		<!-- 顶部图片结束 -->
+		<!-- 新闻主体开始 -->
+		<div class="newsmain">
+			<div class="newslabel">
+				<img src="images/news/home.png" class="homepng">
+				<span class="labelwords">
+					<a href="main.html" class="amain">
+						英雄联盟首页
+					</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					<span style="color: #000">新闻列表</span>
+				</span>
+			</div>
+			<div class="clear"></div>
+			<!-- 新闻列表开始 -->
+			<div class="newslist">
+				<ul class="listul">
+					<li class="listli">综合</li>
+					<li class="listli">公告</li>
+					<li class="listli">赛事</li>
+					<li class="listli">攻略</li>
+					<li class="listli">社区</li>
+				</ul>
+				<!-- <div class="newsdiv">
+					<div class="eachnew">
+						<span class="listtitle">视频</span>
+						<a href="#" class="listwords">【问拳头第87期】下波炫彩销售？
+						</a>
+						<span class="listtime">2019-06-02</span>
+					</div>
+					<div class="eachnew"></div>
+					<div class="eachnew"></div>
+					<div class="eachnew"></div>
+					<div class="eachnew"></div>
+					<div class="eachnew"></div>
+					<div class="eachnew"></div>
+
+				</div> -->
+				<script type="text/javascript">
+				var listtitle=[["新闻","赛事","赛事","视频","视频","赛事","新闻","视频","新闻","新闻","赛事","赛事","公告","公告","新闻","新闻"],["公告","公告","公告","新闻","公告","公告","公告","公告","公告","公告","公告","公告","公告","公告","公告","公告"],["视频","赛事","赛事","赛事","赛事","视频","赛事","赛事","赛事","赛事","赛事","视频","视频","娱乐","视频","赛事"],["教学","教学","教学","教学","教学","教学","教学","教学","教学","教学","教学","教学","教学","教学","教学","教学"],["论坛","其他","娱乐","娱乐","娱乐","新闻","新闻","论坛","论坛","论坛","论坛","论坛","论坛","论坛","论坛","论坛"]];
+				var listwords=[["/开发者日志：英雄平衡性框架","LGD主场对阵V5 WE和RNG谁能收获首胜","2019LPL夏季赛今日开战","铁铠冥魂莫德凯撒技能预览：冥界回归的新进死亡领主","死兆星系列预览：烬、卡尔玛、萨科","创意电路板点亮LOL高校联赛福建站","铁铠冥魂莫德凯撒的技能更新一览","莫德凯撒: 铁铠冥魂的重生","掌盟对战助手功能回归 主播秘籍助你对线克敌先机","“520甜蜜周末”全场半价延长公告","5月27日LPL夏季赛售票开启","2019LPL夏季赛赛程公布","峡谷之巅第四赛季即将结束","全场半价客户端商城入口恢复公告","关于测试服孙悟空的技能改动详解","游戏玩法随想5月17日：关于悠米加强和测试服孙悟空改动"],["6月5日凌晨5点停机版本更新公告","5月31日免费英雄更换公告","改名卡下架公告","游戏环境公示及处罚名单5月27日","“520甜蜜周末”全场半价延长公告","峡谷之巅第四赛季即将结束","部分大区任务系统故障补发公告","全场半价客户端商城入口恢复公告","微信登录功能上线公告","5月24日免费英雄更换公告","5月21日比赛服下载地址更新公告","“520甜蜜周末”全场半价即将开启","游戏环境公示及处罚名单5月20日","部分大区服务器波动公告","季中试炼门票页面FAQ更正公告","部分大区任务奖励延迟到账公告"],["TOP5：Maple塞拉斯大招一击制敌","Smlz四杀卡莎获首胜 TheShy凯南完美翻盘","TOP5：Lies妮蔻开团终结比赛","iG新辅助首秀 LGD与RNG上演恩怨局","Kramer助LGD获首胜 Uzi四杀爆炸输出","iG新秀辅助首发 SN夏季赛首战VG","TOP5：iBoy卡莎巧躲技能极限反打","悠米的正确打开方式 Crisp无闪现保护队友","LGD主场对阵V5 WE和RNG谁能收获首胜","EDG夏季赛开门红 FPX悠米首秀击败JDG","2019LPL夏季赛今日开战","战出无限可能 LPL夏季赛正式开战","LOL电竞直播中心上线 夏季赛战出无限可能","IG官宣新辅助入队 宝蓝迎来竞争上岗","2019LPL夏季赛合作伙伴名单公布","夏季赛最值得关注的上单和打野选手"],["希维尔崛起登榜首 9.11八大ADC全解读","老玩家亲授攻略 玛尔扎哈必备技巧14条","中单新王鳄鱼领衔 9.11胜率大涨英雄","丛刃雷克塞野区崛起 新版十大强势套路","9.11T1强势英雄推荐 偷男寡妇称霸上野","辅助光辉正式登顶 9.11五大新崛起英雄","重做铁男进军打野 被动必杀流打法揭秘","9.11两大加强打野：酒桶狼人或成野区新宠","男刀领衔脆皮噩梦 9.10三大上分刺客","李哥上分计划：偷钱流AD卡牌驰骋中路","悠米冷知识科普！魔法猫咪辅助攻略教学","新版莫德凯撒实战解析！征服者或成新玩法","上单战士克制之道！奎因领衔三远程压制","版本中路四大黑科技 李哥AD卡牌领衔","野核版本再度来袭？死歌悠米组合成新宠","传送流下路成版本热门！希维尔领衔极速发育"],["【问拳头第87期】下波炫彩销售？","电竞小说《我的时代》224章：司马仪送钩","每周Fanart精选：下路的羁绊","每周Fanart精选：时间滴答滴答就消逝了","每周Fanart精选：美好的时光","每周Fanart精选：LPL绽放于世界之巅","每周Fanart精选：削弱的是刀锋而不是意志！","LPL会不会上演琴女宝石组合？","LPL春季总决赛你选择去现场还是看直播？","你会因为喜欢某款皮肤去苦练技术吗？","LOL日常，你中了几个？","Kkoma公布婚期，Mystic直播带娃","【无节操】一个冬天过去，大家都胖了....","【防坑大指南】4月12日周免攻略","剑魔R或将新增恐惧周围敌方英雄","震惊！锐雯扎克竟是这种关系？"]];
+				var listtime=[["2019-05-31","2019-06-01","2019-06-01","2019-05-29","2019-05-29","2019-05-28","2019-05-28","2019-05-28","2019-05-28","2019-05-26","2019-05-25","2019-05-25","2019-05-24","2019-05-24","2019-05-23","2019-05-23"],["2019-06-03","2019-05-29","2019-05-28","2019-05-27","2019-05-26","2019-05-24","2019-05-24","2019-05-24","2019-05-23","2019-05-22","2019-05-21","2019-05-20","2019-05-20","2019-05-18","2019-05-17","2019-05-17"],["2019-06-05","2019-06-05","2019-06-04","2019-06-04","2019-06-04","2019-06-03","2019-06-03","2019-06-02","2019-06-02","2019-06-02","2019-06-02","2019-06-01","2019-06-01","2019-06-01","2019-06-01","2019-05-31"],["2019-06-04","2019-06-04","2019-06-03","2019-06-02","2019-06-02","2019-06-02","2019-05-31","2019-05-31","2019-05-31","2019-05-30","2019-05-30","2019-05-29","2019-05-29","2019-05-29","2019-05-28","2019-05-28"],["2019-04-15","2019-05-24","2019-05-12","2019-05-04","2019-04-28","2019-04-25","2019-04-21","2019-04-16","2019-04-16","2019-04-16","2019-04-16","2019-04-16","2019-04-15","2019-04-15","2019-04-15","2019-04-15"]];
+				for(var i=0;i<5;i++){
+					document.write("<div class='newsdiv' ");
+					if(i==0) document.write("style='display: block'");
+					document.write(">");
+					for(var j=0;j<16;j++){
+						document.write("<div class='eachnew' onclick=\"window.open('index.html')\">");
+						document.write("<span class='listtitle'>"+listtitle[i][j]+"</span>");
+						document.write("<a href='#'' class='listwords'>"+listwords[i][j]+"</a>");
+						document.write("<span class='listtime'>"+listtime[i][j]+"</span>");
+						document.write("</div>");
+					}
+					document.write("</div>");
+				}
+				
+				</script>
+			</div>
+			<!-- 新闻列表结束 -->
+			<!-- 广告开始 -->
+			<div class="newsad">
+				<div class="qrcord">
+					<img src="images/news/qrcodeone.jpg" class="qrcodejpg">
+					<div class="qrcodewords">
+						<span class="pone">掌上英雄联盟</span><br><br>
+						<span class="ptwo">官方资讯 快速掌握</span><br><br>
+						<span class="pthree">扫一扫立即下载</span>
+					</div>
+				</div>
+				<div class="qrcord">
+					<img src="images/news/qrcodetwo.jpg" class="qrcodejpg">
+					<div class="qrcodewords">
+						<span class="pone">英雄联盟微博</span><br><br>
+						<span class="ptwo">官方平台 精彩不停</span><br><br>
+						<span class="pthree">扫一扫即可关注</span>
+					</div>
+				</div>
+				<div class="race">
+					<div class="racecenterleft">
+						<img src="images/news/Youtube.png">
+						<span>视频中心</span>
+					</div>
+					<div class="racecenterright">
+						<img src="images/news/trophy.png">
+						<span>视频中心</span>
+					</div>
+				</div>
+				<div class="race">
+					<div class="racecenterleft">
+						<img src="images/news/gift.png">
+						<span>视频中心</span>
+					</div>
+					<div class="racecenterright">
+						<img src="images/news/universe.png">
+						<span>视频中心</span>
+					</div>
+				</div>
+			</div>
+			<!-- 广告结束 -->
+		</div>
+		<!-- 新闻主体结束 -->
+	</div>
+	<!-- 页尾开始 -->
+	<div class="foot">
+		<a href="#" title="腾讯互动娱乐">
+			<div class="footpicone"></div>
+		</a>
+		<a href="#" title="RIOT">
+			<div class="footpictwo"></div>
+		</a>
+		
+		<div class="footword">
+			<p>腾讯互动娱乐|服务条款|腾讯游戏隐私保护指引|腾讯游戏招聘|腾讯游戏客服|游戏地图|商务合作|腾讯网|网站导航</p>
+			<p>腾讯公司版权所有</p>
+			<p>COPYRIGHT © 1998 - 2019 TENCENT. ALL RIGHTS RESERVED.</p>
+			<p>COPYRIGHT © 2012 Riot Games,Inc. ALL RIGHTS RESERVED.</p>
+			<p>本网络游戏适合18+岁的用户使用；为了您的健康，请合理控制游戏时间。</p>
+			<p>粤网文[2017]6138-1456号|（总）网出证（粤）字第057号</p>
+			<p>批准文号：新出审字[2011]310号 |文网进字[2011] 004号 | 出版物号：ISBN 978-7-89989-145-2|全国文化市场统一举报电话：12318</p>
+		</div>
+	</div>
+	<!-- 页尾结束 -->
+</body>
+</html>
