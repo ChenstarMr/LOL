@@ -1,0 +1,41 @@
+*{padding: 0;margin: 0;}
+a{text-decoration: none}
+.clear{clear: both;}
+.main{width: 100%;background: #F0F0F0;overflow-x: hidden;}
+.topimg{height: 400px;width: 100%}
+/*新闻主体开始*/
+.newsmain{width: 100%;height: 1200px;background: #F0F0F0;padding: 0 60px}
+.newslabel{font-size: 14px;color: #a9a9a9;padding: 40px 0}
+.homepng{float: left;padding-right: 10px}
+.labelwords{margin-left: 5px;}
+.amain{color: #a9a9a9}
+.amain:hover{text-decoration: underline}
+.newslist{float: left;width: 63%;height: 100%;background: #fff}
+
+.listul{padding-left: 30px;line-height: 80px;vertical-align: middle;height: 80px;border-bottom: 1px #e0e2e2 solid;font-size: 24px}
+.listul:hover{color: #1da6ba}
+.newsdiv{padding: 20px 40px 0 40px;}
+
+.newsad{float: right;width: 23%;height: 40%;margin-right: 140px}
+.qrcord{padding: 20px 20px 0 20px;width: 100%;height: 30%;margin-bottom: 20px;background: #fff;box-shadow:0 0 1px #5B5B5B inset;}
+.qrcodejpg{width: 124px;float: left;}
+.qrcodewords{margin-left: 20px;float: left;padding-bottom: 20px}
+.qrcodewords .pone{font-size: 30px}
+.qrcodewords .ptwo{font-size: 18px}
+.qrcodewords .pthree{font-size: 14px;color: #c3c3c3}
+.race{width: 100%;height: 14%;margin-bottom: 10px;}
+.racecenterleft:hover{box-shadow:0 0 2px #5B5B5B inset;}
+.racecenterright:hover{box-shadow:0 0 2px #5B5B5B inset;}
+.racecenterleft{position: relative;float: left;width: 48%;height: 100%;background: #fff;}
+.race img{margin: 17.5px 10px 17.5px 30px}
+.race span{cursor:pointer;font-size: 15px;position: absolute;top: 23px;}
+.race span:hover{color: #1da6ba}
+.racecenterright{position: relative;float: right;width: 48%;height: 100%;background: #fff;}
+/*新闻主体结束*/
+/*页尾开始*/
+.foot{width: 100%;height: 265px;background: #e3e2e2}
+.footpicone{float:left;width: 189px;height: 34px;margin: 100px 0 60px 100px;background-image: url(../images/main/footleftone.png);background-size: 180px 35px;background-repeat: no-repeat;}
+.footpictwo{float:left;width: 140px;height: 34px;margin: 100px 20px 40px;background-image: url(../images/main/footlefttwo.png);background-size: 100px 34px;background-repeat: no-repeat;}
+.footword{color: #b2a994;float:right;width: 50%;height: 205px;margin: 62.5px 100px 62.5px 0;font-size: 12px}
+.footword p{margin-top: 4px}
+/*页尾结束*/
